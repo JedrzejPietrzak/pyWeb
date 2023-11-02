@@ -2,8 +2,7 @@
 
 from __future__ import annotations
 
-from new_app import styles
-from new_app.components.sidebar import sidebar
+from pyWebApp import styles
 from typing import Callable
 
 import reflex as rx
@@ -108,7 +107,6 @@ def template(
         )
         def templated_page():
             return rx.hstack(
-                sidebar(),
                 rx.box(
                     rx.box(
                         page_content(),

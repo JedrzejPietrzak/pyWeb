@@ -1,14 +1,12 @@
-"""Welcome to """
+"""The home page of the app."""
 
-from new_app import styles
-
-# Import all the pages.
-from new_app.pages import *
+from pyWebApp import styles
+from pyWebApp.templates import template
 
 import reflex as rx
 
-# Create the app and compile it.
 
+@template(route="/", title="Home", image="/github.svg")
 def index() -> rx.Component:
     return rx.container(
         rx.box(
@@ -23,7 +21,3 @@ def index() -> rx.Component:
         ),
     )
 
-
-app = rx.App(style=styles.base_style)
-app.add_page(index)
-app.compile()
